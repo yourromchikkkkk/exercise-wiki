@@ -1,12 +1,27 @@
+import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
+
+import Home from './pages/Home';
+import ExerciseDetail from './pages/ExerciseDetail';
+import { Navbar, Footer } from './components';
+
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 import './App.css';
 
 function App() {
-
   return (
-    <Box>
-      <p style={{ color: 'black' }}>APP</p>
-    </Box>
+    <Provider store={store}>
+      <Box width="400px" sx={{ width: { xl: '1488px' }, m: 'auto' }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exercise/:id" element={<ExerciseDetail />} />
+        </Routes>
+        <Footer />
+      </Box>
+    </Provider>
   );
 }
 
