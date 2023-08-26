@@ -1,4 +1,4 @@
-import { Box, Stack, ButtonBase, Typography } from '@mui/material';
+import { Stack, ButtonBase, Typography } from '@mui/material';
 import Icon from '../assets/icons/gym.png';
 import { useDispatch } from 'react-redux';
 import { selectBodyPart } from '../redux/slice';
