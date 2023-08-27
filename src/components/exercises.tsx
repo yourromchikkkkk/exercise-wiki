@@ -23,7 +23,7 @@ const Exercises = () => {
     const fetchExercises = async () => {
       let exerciseList: Exercise[];
       setIsLoading(true);
-      
+
       if (selectedBodyPart !== 'all') {
         exerciseList = await fetchData(
           fetchUrls.exercisesListByBodyPart(selectedBodyPart),
@@ -51,7 +51,7 @@ const Exercises = () => {
     indexOfLastExercise
   );
 
-  const paginate = (event: React.ChangeEvent<unknown>, value: number) => {
+  const paginate = (_: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
 
     window.scrollTo({ top: 1800, behavior: 'smooth' });
