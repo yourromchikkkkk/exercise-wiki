@@ -19,6 +19,7 @@ const Exercises = () => {
 
   const exercisesPerPage = useRef(6);
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const fetchExercises = async () => {
       let exerciseList: Exercise[];
