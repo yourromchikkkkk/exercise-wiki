@@ -1,18 +1,38 @@
+import { useEffect } from 'react';
 import { Box } from '@mui/material';
 import BodyPartCard from './body-part-card';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
+import fetchData from '../utils/fetch-data';
+import { exerciseOptions } from '../utils/fetch-data';
+import { useDispatch } from 'react-redux';
+import { addBodyParts } from '../redux/slice';
+import { selectBodyPartsList } from '../redux/additional-selectors';
+import fetchUrls from '../utils/fetch-urls';
 
-interface IHorizontalScrollBar {
-  data?: string[];
-}
-
-const HorizontalScrollBar: React.FC<IHorizontalScrollBar> = ({ data }) => {
+const HorizontalScrollBar = () => {
   const selectedBodyPart = useSelector(
     (state: RootState) => state.wiki.selectedBodyPart
   );
+  const bodyPartList = useSelector(selectBodyPartsList);
+  const dispatch = useDispatch();
 
-  if (!data) return null;
+  /* eslint-disable react-hooks/exhaustive-deps */
+  useEffect(() => {
+    const fetchBodyPartData = async () => {
+      const bodyPartsList: string[] = await fetchData(
+        fetchUrls.bodyPartsList,
+        exerciseOptions
+      );
+
+      dispatch(addBodyParts(['all', ...bodyPartsList]));
+    };
+
+    fetchBodyPartData();
+  }, []);
+
+  if (!bodyPartList) return null;
+
   return (
     <Box
       sx={{
@@ -26,7 +46,7 @@ const HorizontalScrollBar: React.FC<IHorizontalScrollBar> = ({ data }) => {
         gap: '40px',
       }}
     >
-      {data.map(value => (
+      {bodyPartList.map(value => (
         <Box key={value}>
           <BodyPartCard title={value} selectedBodyPart={selectedBodyPart} />
         </Box>

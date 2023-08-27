@@ -1,5 +1,7 @@
+import ExerciseDetails from '../components/exercise-details';
+
 const ExerciseDetail = () => {
-  return <div>Detail</div>;
+  return <ExerciseDetails />;
 };
 
 export default ExerciseDetail;

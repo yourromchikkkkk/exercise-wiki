@@ -41,4 +41,5 @@ export const { resetExercises, addBodyParts, selectBodyPart, selectExercise } =
 export const wikiSelectors = exerciseWikiAdapter.getSelectors<RootState>(
   state => state.wiki
 );
+console.log('wikiSelectors', wikiSelectors);
 export default wikiSlice.reducer;

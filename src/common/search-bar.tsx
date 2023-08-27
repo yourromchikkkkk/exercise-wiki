@@ -5,6 +5,7 @@ import fetchData from '../utils/fetch-data';
 import { exerciseOptions } from '../utils/fetch-data';
 import { useDispatch } from 'react-redux';
 import { resetExercises } from '../redux/slice';
+import fetchUrls from '../utils/fetch-urls';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,7 +19,7 @@ const SearchBar = () => {
     if (!searchQuery || searchQuery.length < 1) return;
 
     const data: Exercise[] = await fetchData(
-      'https://exercisedb.p.rapidapi.com/exercises',
+      fetchUrls.exersicesList,
       exerciseOptions
     );
 
