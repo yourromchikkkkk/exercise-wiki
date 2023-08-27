@@ -8,6 +8,7 @@ import { addBodyParts } from '../redux/slice';
 
 const Home = () => {
   const dispatch = useDispatch();
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const fetchExerciseData = async () => {
       const bodyPartsList: string[] = await fetchData(
