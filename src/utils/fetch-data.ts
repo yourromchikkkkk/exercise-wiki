@@ -1,4 +1,4 @@
-import { VITE_RAPID_API_KEY } from './environmentVariables';
+import { VITE_RAPID_API_KEY } from './environment-variables';
 
 export const exerciseOptions = {
   method: 'GET',

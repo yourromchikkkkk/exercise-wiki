@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import BodyPartCard from './BodyPartCard';
+import BodyPartCard from './body-part-card';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 

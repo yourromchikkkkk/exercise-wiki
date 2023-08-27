@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 
-import Home from './pages/Home';
-import ExerciseDetail from './pages/ExerciseDetail';
+import Home from './pages/home';
+import ExerciseDetail from './pages/exercise-detail';
 import { Navbar, Footer } from './components';
 
 import { Provider } from 'react-redux';

@@ -1,7 +1,7 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
-import HeroBanner from './HeroBanner';
-import SearchExercise from './SearchExercise';
-import Exercises from './Exercises';
+import Navbar from './navbar';
+import Footer from './footer';
+import HeroBanner from './hero-banner';
+import SearchExercise from './search-exercise';
+import Exercises from './exercise';
 
 export { Navbar, Footer, HeroBanner, SearchExercise, Exercises };

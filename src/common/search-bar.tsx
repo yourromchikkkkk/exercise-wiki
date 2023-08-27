@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Exercise } from '../types';
 import { Box, TextField, Button } from '@mui/material';
-import fetchData from '../utils/fetchData';
-import { exerciseOptions } from '../utils/fetchData';
+import fetchData from '../utils/fetch-data';
+import { exerciseOptions } from '../utils/fetch-data';
 import { useDispatch } from 'react-redux';
 import { resetExercises } from '../redux/slice';
 

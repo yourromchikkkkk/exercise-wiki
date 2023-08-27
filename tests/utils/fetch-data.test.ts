@@ -1,4 +1,4 @@
-import fetchData, { exerciseOptions } from '../../src/utils/fetchData';
+import fetchData, { exerciseOptions } from '../../src/utils/fetch-data';
 
 // Create a mock Response object
 const mockResponse = {

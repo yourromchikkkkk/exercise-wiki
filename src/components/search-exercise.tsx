@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import { HorizontalScrollBar } from '../common';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
-import SearchBar from '../common/SearchBar';
+import SearchBar from '../common/search-bar';
 
 const SearchExercise = () => {
   const bodyPartsList = useSelector((state: RootState) => state.wiki.bodyParts);

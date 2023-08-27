@@ -1,4 +1,4 @@
-import requireEnv from './requireEnv';
+import requireEnv from './require-env';
 
 export const VITE_RAPID_API_KEY = requireEnv(
   'VITE_RAPID_API_KEY',

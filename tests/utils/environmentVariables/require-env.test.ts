@@ -1,4 +1,4 @@
-import requireEnv from '../../../src/utils/environmentVariables/requireEnv';
+import requireEnv from '../../../src/utils/environment-variables/require-env';
 
 describe('requireEnv function', () => {
   test('throws an error', () => {

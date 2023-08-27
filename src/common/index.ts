@@ -1,3 +1,3 @@
-import HorizontalScrollBar from './HorizontalScrollBar';
+import HorizontalScrollBar from './horizontal-scroll-bar';
 
 export { HorizontalScrollBar };

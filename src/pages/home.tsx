@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Box } from '@mui/material';
 import { HeroBanner, SearchExercise, Exercises } from '../components';
-import fetchData from '../utils/fetchData';
-import { exerciseOptions } from '../utils/fetchData';
+import fetchData from '../utils/fetch-data';
+import { exerciseOptions } from '../utils/fetch-data';
 import { useDispatch } from 'react-redux';
 import { addBodyParts } from '../redux/slice';
 
